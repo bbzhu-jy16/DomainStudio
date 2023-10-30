@@ -1,5 +1,5 @@
 # DomainStudio
-DomainStudio is the proposed few-shot domain-driven generation method for diffusion models (preprint: arxiv 2306:14153). It is compatible with unconditional DDPMs and conditional text-to-image models (Stable Diffusion). The code are provided in the two files separately.
+DomainStudio is a few-shot domain-driven generation method for diffusion models (preprint: arxiv 2306:14153). It is compatible with unconditional DDPMs and conditional text-to-image models (Stable Diffusion). The code are provided in the two files separately.
 
 ## Unconditional
 Our code is based on [openai/improved-diffusion](https://github.com/openai/improved-diffusion, "Unconditional Diffusion"). We train source models on FFHQ and LSUN-Church and adapt them to several target domians using 10-shot limited data.
