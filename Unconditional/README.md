@@ -10,17 +10,17 @@ The source models pre-trained on FFHQ and LSUN Church will be released as well.
 pip install -e .
 
 Other Requirements:
-Linux System
-python 3.8.13
-pytorch 1.7.1+cu110
-torchvision 0.8.2+cu110
-numpy 1.23.2
-Pillow 9.2.0
-six 1.16.0
-scipy 1.9.3
-requests 2.28.1
-mpi4py 3.0.3
-setuptools 63.4.1
+Linux System \
+python 3.8.13 \
+pytorch 1.7.1+cu110 \
+torchvision 0.8.2+cu110 \
+numpy 1.23.2 \
+Pillow 9.2.0 \
+six 1.16.0 \
+scipy 1.9.3 \
+requests 2.28.1 \
+mpi4py 3.0.3 \
+setuptools 63.4.1 \
 
 Other experiments are carried out on x8 NVIDIA RTX A6000 GPUs (48GB memory of each). 
 
@@ -39,29 +39,26 @@ TRAIN_FLAGS="--lr 1e-4 --batch_size 3"
 
 'batch_size' represents the batch size on each GPU.
 
-Single GPU training:
+## Single GPU training:
 python scripts/image_train.py --data_dir /datapath $TRAIN_FLAGS $MODEL_FLAGS
 
-Multi-GPU training:
+## Multi-GPU training:
 mpiexec -n 8 python scripts/image_train.py --data_dir /datapath $TRAIN_FLAGS $MODEL_FLAGS
 
 # Sampling
 
 Sampling the final output x_0:
 
-Single GPU sampling:
+## Single GPU sampling:
 python scripts/image_sample.py --model_path /model_path/model.pt $MODEL_FLAGS
 
-Multi-GPU sampling:
+## Multi-GPU sampling:
 mpiexec -n 8 python scripts/image_sample.py --model_path /model_path/model.pt $MODEL_FLAGS
 
 Sampling several diffusion steps with interval_t (get x_T, x_T-t, x_T-2t, ..., x_0):
 
-Single GPU sampling:
+## Single GPU sampling:
 python scripts/image_sample.py --model_path /model_path/model.pt --interval_t 200 $MODEL_FLAGS
 
-Multi-GPU sampling:
+## Multi-GPU sampling:
 mpiexec -n 8 python scripts/image_sample.py --model_path /model_path/model.pt --interval_t 200 $MODEL_FLAGS
-
-The sampling results are saved in npz format.
-
