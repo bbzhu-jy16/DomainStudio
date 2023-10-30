@@ -18,4 +18,5 @@ Pipeline of our DomainStudio for text-to-image generation:
 
 Generated Samples:
 ![Image](./Images/vangoghouses.jpg)
-![Image](./Images/overview2.jpg)
+
+![Image](./Images/stable3.jpg)
