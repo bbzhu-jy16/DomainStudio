@@ -63,7 +63,3 @@ accelerate launch train_domainstudio.py \
   --push_to_hub
 
 
-accelerate launch bleeding_stop.py --pretrained_model_name_or_path=checkpoints/sdxl-base --pretrained_refiner_name_or_path=checkpoints/sdxl-refiner --target_prompt="a dog next to a cat" --bleeding_prompt1="a dog next to a dog" --bleeding_prompt2="a cat next to a cat" --class_prompt1="a dog" --class_prompt2="a cat" --target_data_dir="samples/catdogs" --bleeding_data_dir1="samples/dogdog" --bleeding_data_dir2="samples/catcat" --resolution=1024 --train_batch_size=2 --gradient_accumulation_steps=1 --learning_rate=6e-5 --lr_scheduler="constant" --lr_warmup_steps=0 --num_class_images=1000 --max_train_steps=1000 --output_dir='./test_catdog'
-
-accelerate launch train_dreambooth_lora_sdxl.py --pretrained_model_name_or_path=checkpoints/sdxl-base --pretrained_refiner_name_or_path=checkpoints/sdxl-refiner --target_prompt="a dog next to a cat" --bleeding_prompt1="a dog next to a dog" --bleeding_prompt2="a cat next to a cat" --class_prompt1="a dog" --class_prompt2="a cat" --target_data_dir="samples/catdogs" --bleeding_data_dir1="samples/dogdog" --bleeding_data_dir2="samples/catcat" --resolution=1024 --train_batch_size=2 --gradient_accumulation_steps=1 --learning_rate=6e-5 --lr_scheduler="constant" --lr_warmup_steps=0 --num_class_images=1000 --max_train_steps=1000 --output_dir='./test_catdog'
-
