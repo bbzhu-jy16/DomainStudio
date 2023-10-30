@@ -20,7 +20,7 @@ six 1.16.0 \
 scipy 1.9.3 \
 requests 2.28.1 \
 mpi4py 3.0.3 \
-setuptools 63.4.1 \
+setuptools 63.4.1 
 
 Other experiments are carried out on x8 NVIDIA RTX A6000 GPUs (48GB memory of each). 
 
