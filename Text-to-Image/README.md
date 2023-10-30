@@ -26,8 +26,8 @@ accelerate launch train_domainstudio.py \
   --with_prior_preservation --prior_loss_weight=1.0 \
   --image_loss_weight=1e+2 \
   --hf_loss_weight=1e+2 --hfmse_loss_weight=0.1 \
-  --instance_prompt="instance prompt" \  # eg., a [V] dog
-  --class_prompt="class prompt" \ # eg., a dog
+  --instance_prompt="instance prompt"   # eg., a [V] dog \
+  --class_prompt="class prompt"  # eg., a dog \
   --resolution=512 \
   --train_batch_size=4 \
   --gradient_accumulation_steps=1 \
@@ -60,9 +60,9 @@ accelerate launch train_domainstudio.py \
   --with_prior_preservation --prior_loss_weight=1.0 \
   --image_loss_weight=1e+2 \
   --hf_loss_weight=1e+2 --hfmse_loss_weight=0.1 \
-  --instance_prompt="instance prompt" \  # eg., a [V] dog
-  --style_prompt="style prompt" \ # eg., a [V] dog in the [S] style
-  --class_prompt="class prompt" \ # eg., a dog
+  --instance_prompt="instance prompt"  # eg., a [V] dog \
+  --style_prompt="style prompt"  # eg., a [V] dog in the [S] style \
+  --class_prompt="class prompt"  # eg., a dog \
   --resolution=512 \
   --train_batch_size=4 \
   --gradient_accumulation_steps=1 \
