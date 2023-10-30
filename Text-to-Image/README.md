@@ -8,11 +8,16 @@ Our code is also based on the implementation of DreamBooth from diffusers.
 The same as the environment of huggingface/diffusers.
 
 # DomainStudio Training
+## Setting Variables
 export MODEL_NAME="CompVis/stable-diffusion-v1-4"
+
 export INSTANCE_DIR="path-to-instance-images"
+
 export CLASS_DIR="path-to-class-images"
+
 export OUTPUT_DIR="path-to-save-model"
 
+## Training
 accelerate launch train_domainstudio.py \
   --pretrained_model_name_or_path=$MODEL_NAME  \
   --instance_data_dir=$INSTANCE_DIR \
@@ -34,12 +39,18 @@ accelerate launch train_domainstudio.py \
   --push_to_hub
 
 # Personalized DomainStudio Training
+## Setting Variables
 export MODEL_NAME="CompVis/stable-diffusion-v1-4"
+
 export INSTANCE_DIR="path-to-instance-images"
+
 export STYLE_DIR="path-to-style_images"
+
 export CLASS_DIR="path-to-class-images"
+
 export OUTPUT_DIR="path-to-save-model"
 
+## Training
 accelerate launch train_domainstudio.py \
   --pretrained_model_name_or_path=$MODEL_NAME  \
   --instance_data_dir=$INSTANCE_DIR \
