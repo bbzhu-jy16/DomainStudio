@@ -11,7 +11,7 @@ Generated Samples:
 ![Image](./Images/sunglasses.jpg)
 
 ## Text-to-Image
-Our code is based on [huggingface/diffusers](https://github.com/huggingface/diffusers, "SD1.4"). We use Stable Diffusion V1.4 as the source model and realize domain-driven generation using limited data.
+Our code is based on [huggingface/diffusers](https://github.com/huggingface/diffusers). We use Stable Diffusion V1.4 as the source model and realize domain-driven generation using limited data.
 
 Pipeline of our DomainStudio for text-to-image generation:
 ![Image](./Images/overview2.jpg)
