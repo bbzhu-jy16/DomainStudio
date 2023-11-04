@@ -1521,7 +1521,7 @@ class GaussianDiffusion:
             #print(terms["similarity2"])
 
             if "vb" in terms:
-                terms["loss"] = terms["mse"] + terms["vb"] + terms["similarity"] + terms["similarity2"] + terms["mse2"] * 0.05
+                terms["loss"] = terms["mse"] + terms["vb"] + terms["similarity"] + terms["similarity2"] + terms["mse2"]
                 #terms["loss"] = terms["mse"] + terms["similarity"]
             else:
                 terms["loss"] = terms["mse"] + terms["similarity"]
